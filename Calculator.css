@@ -36,21 +36,28 @@ body {
 #keys {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    gap: 8px;
     padding: 10px;
 }
 
 button {
     width: 100%;
     aspect-ratio: 1 / 1;
-    border-radius: 50%;
+    border: none;                /* REMOVE default border */
+    outline: none;               /* REMOVE focus outline */
+    border-radius: 50%;          
     background-color: rgb(63, 61, 61);
     color: whitesmoke;
     font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.2s;
+    display: flex;               /* Center content inside perfectly */
+    align-items: center;
+    justify-content: center;
+      box-shadow: 0 0 1px #000;
 }
+
 
 button:hover {
     background-color: hsl(0, 0%, 40%);
